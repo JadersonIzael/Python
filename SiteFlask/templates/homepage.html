@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Site com Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css')}}">
+
+</head>
+<body>
+
+    <header>
+        <h1>Site com Flask</h1>
+        <nav>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="contato">Contato</a></li>
+                <li><a href="usuarios/{{nome_usuario}}">Perfil</a></li>
+                <li><a href="cadastroUsuarios">Cadastrar</a></li>
+                <li><a href="cotacaoBase">Cotação de moedas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="imagem-cima">
+            <img src="../static/cima2.png" alt="Imagem com Efeito de Movimento" />
+        </div>
+        <div class="imagem-baixo">
+            <img src="../static/cima.png" alt="Imagem com Efeito de Movimento" />
+        </div>
+        <p>{{cotacao}}</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Site com Flask</p>
+    </footer>
+
+</body>
+</html>
